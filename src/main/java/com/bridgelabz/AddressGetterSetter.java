@@ -1,5 +1,7 @@
 package com.bridgelabz;
 
+import java.util.Comparator;
+
 public class AddressGetterSetter {
     String fname;
     String lname;
@@ -51,5 +53,15 @@ public class AddressGetterSetter {
         this.phone = phone;
     }
 
+    public static Comparator<AddressGetterSetter> CityComparator = new Comparator<AddressGetterSetter>() {
+
+        public int compare(AddressGetterSetter a1, AddressGetterSetter a2) {
+            String Name1 = a1.getCity().toUpperCase();
+            String Name2 = a2.getCity().toUpperCase();
+
+
+            return Name1.compareTo(Name2);
+        }
+    };
 
 }

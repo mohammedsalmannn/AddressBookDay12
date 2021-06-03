@@ -1,13 +1,12 @@
 package com.bridgelabz;
 
-import java.util.ArrayList;
-import java.util.Scanner;
-
+import java.util.*;
 
 
 public class AddressService implements IAddress {
 
     ArrayList<AddressGetterSetter> book =new ArrayList<>();
+    HashMap<String, String> citydict = new HashMap<String, String>();
     Scanner s = new Scanner(System.in);
 
 
@@ -106,7 +105,21 @@ public class AddressService implements IAddress {
             }
         }
     }
+    @Override
+    public void SortCity() {
+        Collections.sort(book, AddressGetterSetter.CityComparator);
+    }
+    @Override
+    public void DisplayCity() {
 
+        Set set = citydict.entrySet();
+        Iterator iterator = set.iterator();
+        while(iterator.hasNext()) {
+            Map.Entry mentry = (Map.Entry)iterator.next();
+            System.out.print("City is: "+ mentry.getKey() + " & Name is: ");
+            System.out.println(mentry.getValue());
+        }
+    }
 
 
 }
