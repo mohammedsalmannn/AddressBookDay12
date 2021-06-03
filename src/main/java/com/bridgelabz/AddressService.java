@@ -6,6 +6,7 @@ import java.util.Scanner;
 
 
 public class AddressService implements IAddress {
+
     ArrayList<AddressGetterSetter> book =new ArrayList<>();
     Scanner s = new Scanner(System.in);
 
@@ -28,7 +29,18 @@ public class AddressService implements IAddress {
         Info.setZip(s.next());
         System.out.println("Enter your phone number");
         Info.setPhone(s.next());
-        book.add(Info);
+        for(int i =0;i<book.size();i++) {
+            if(book.get(i).getFname().equals(Info.getFname())) {
+                if(book.get(i).getLname().equals(Info.getLname())) {
+                    System.out.println("Duplicate");
+                    break;
+                }
+            }
+            else
+                book.add(Info);
+        }
+        if(book.size()==0)
+            book.add(Info);
 
     }
 
@@ -94,5 +106,7 @@ public class AddressService implements IAddress {
             }
         }
     }
+
+
 
 }
