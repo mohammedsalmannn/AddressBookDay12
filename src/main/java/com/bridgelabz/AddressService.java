@@ -72,6 +72,27 @@ public class AddressService implements IAddress {
 
         }
     }
+    @Override
+    public void Delete() {
+
+        String temp=null;
+        System.out.println("Enter the First name of the record you want to delete");
+        temp=s.next();
+        if(book.isEmpty())
+        {
+            System.out.println("No records to delete");
+            return;
+        }
+        for(int i=0;i<book.size();i++)
+        {
+            if(book.get(i).getFname().equals(temp))
+            {
+                book.remove(i);
+                break;
+            }
+        }
+    }
+
 
 
 
