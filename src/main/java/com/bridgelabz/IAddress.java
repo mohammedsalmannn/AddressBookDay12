@@ -9,4 +9,6 @@ public interface IAddress {
     void SortCity();
 
     void DisplayCity();
+
+    void Search();
 }
