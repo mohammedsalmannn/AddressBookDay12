@@ -1,5 +1,6 @@
 com/bridgelabz/AddressGetterSetter.java
  com.bridgelabz.AddressGetterSetter
+ com.bridgelabz.AddressGetterSetter$1
 com/bridgelabz/IAddress.java
  com.bridgelabz.IAddress
 com/bridgelabz/AddressService.java

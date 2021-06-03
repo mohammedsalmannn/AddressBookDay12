@@ -63,5 +63,12 @@ public class AddressGetterSetter {
             return Name1.compareTo(Name2);
         }
     };
+    @Override
+    public String toString() {
+        return "AddressGetterSetter [fname=" + fname + ", lname=" + lname + ", address=" + address + ", state=" + state
+                + ", city=" + city + ", zip=" + zip + ", phone=" + phone + "]";
+    }
+
+
 
 }

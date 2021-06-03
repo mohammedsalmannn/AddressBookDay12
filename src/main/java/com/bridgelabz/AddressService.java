@@ -100,9 +100,20 @@ public class AddressService implements IAddress {
     }
 
     @Override
+    public void SortName() {
+
+    }
+
+    @Override
     public void SortCity() {
         Collections.sort(book, AddressGetterSetter.CityComparator);
     }
+
+    @Override
+    public void SortState() {
+
+    }
+
 
     @Override
     public void DisplayCity() {
@@ -115,6 +126,9 @@ public class AddressService implements IAddress {
             System.out.println(mentry.getValue());
         }
     }
+
+
+
 
     @Override
     public void Search() {
@@ -152,4 +166,5 @@ public class AddressService implements IAddress {
 
 
     }
+
 }

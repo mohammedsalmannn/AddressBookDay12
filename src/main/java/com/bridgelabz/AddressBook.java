@@ -30,6 +30,15 @@ public class AddressBook {
                 case 3:
                     object.Delete();
                     break;
+                case 4:
+                    object.SortCity();
+                    break;
+                case 5:
+                    object.DisplayCity();
+                    break;
+                case 6:
+                    object.Search();
+                    break;
                 default:System.out.println("Invalid option");
             }
             System.out.println("Do you want to continue?(0/1)");
