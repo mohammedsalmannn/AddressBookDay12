@@ -26,10 +26,10 @@ public class AddressBook {
                     break;
                 case 2:
                     object.Edit();
+                    break;
                 case 3:
                     object.Delete();
                     break;
-
                 default:System.out.println("Invalid option");
             }
             System.out.println("Do you want to continue?(0/1)");
